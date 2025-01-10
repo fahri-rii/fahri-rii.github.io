@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Transaksi - Aplikasi Penjualan Barang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo Aplikasi Penjualan Barang" class="logo">
+        <nav>
+            <ul>
+                <li><a href="Beranda.html">Home</a></li>
+                <li><a href="produk.html">Product</a></li>
+                <li><a href="transaksi.html">Transactoin</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Form Transaksi</h1>
+        <form id="transaksiForm">
+            <label for="namaProduk">Nama Produk:</label>
+            <input type="text" id="namaProduk" name="namaProduk">
+            <p id="errorNamaProduk" class="error" style="color: red; display: none;">Nama Produk harus diisi.</p>
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah">
+            <p id="errorJumlah" class="error" style="color: red; display: none;">Jumlah harus diisi dan lebih dari 0.</p>
+
+            <label for="ukuran">Ukuran:</label>
+            <input type="text" id="ukuran" name="ukuran">
+            <p id="errorUkuran" class="error" style="color: red; display: none;">Ukuran harus diisi.</p>
+
+            <button type="submit">Simpan</button>
+        </form>
+        <a href="daftar_transaksi.html">Daftar Transaksi</a>
+    </main>
+            
+
+    <footer>
+        <p>&copy; 2025 Lancar Jaya Store</p>
+    </footer>
+
+    <script>
+        document.getElementById('transaksiForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Mencegah pengiriman formulir jika tidak valid
+
+            // Ambil elemen input dan elemen pesan kesalahan
+            const namaProduk = document.getElementById('namaProduk');
+            const errorNamaProduk = document.getElementById('errorNamaProduk');
+            const jumlah = document.getElementById('jumlah');
+            const errorJumlah = document.getElementById('errorJumlah');
+            const ukuran = document.getElementById('ukuran');
+            const errorUkuran = document.getElementById('errorUkuran');
+
+            // Reset pesan kesalahan
+            errorNamaProduk.style.display = 'none';
+            errorJumlah.style.display = 'none';
+            errorUkuran.style.display = 'none';
+
+            let isValid = true;
+
+            // Validasi Nama Produk
+            if (namaProduk.value.trim() === '') {
+                errorNamaProduk.style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi Jumlah
+            if (jumlah.value.trim() === '' || jumlah.value <= 0) {
+                errorJumlah.style.display = 'block';
+                isValid = false;
+            }
+
+            // Validasi Ukuran
+            if (ukuran.value.trim() === '') {
+                errorUkuran.style.display = 'block';
+                isValid = false;
+            }
+
+            // Jika validasi lolos, kirim data
+            if (isValid) {
+                alert("Data berhasil disimpan!");
+                // Logika untuk menyimpan data dapat ditambahkan di sini
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+body {
+    font-family: helvetica;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    width: 15% ;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    margin: 20px auto;
+    max-width: 300px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: auto;
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    bottom: 0;
+}
+.produk-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.produk {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produk img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+    background: none;
+}
+
+.nama-produk {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.harga-produk {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.produk select {
+    padding: 8px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+/* Contact Us Page */
+.contact {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.h1-contact {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.p-contact {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.nav-contact {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-li {
+    font-size: 1.1em;
+    margin: 15px 0;
+}
+
+.nav-a{
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-a:hover {
+    color: #007bff;
+}
+
+/* Card-like Box Style */
+.nav-li {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-li strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .h1-contact {
+        font-size: 1.5em;
+    }
+
+    .p-contact {
+        font-size: 0.9em;
+    }
+
+    .nav-li {
+        padding: 10px;
+    }
+}
+
+
+/* Responsivitas */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+}
+}
